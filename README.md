@@ -1,4 +1,4 @@
-# Text Classification using TextCNN
+# Generative Adversarial Networks (GANs) Collection
 This repository contains a collection of Generative Adversarial Networks (GANs) implemented in PyTorch. 
 It demonstrates the progression of generative models from the basic Vanilla GAN to more advanced architectures like DCGAN and CGAN.
 
@@ -17,12 +17,12 @@ I have implemented a comprehensive pipeline that allows for training and evaluat
 	- Integrated loss functions (G_Loss, D_Loss) for stable training.
 
 ## Results
-### - Fashion MNIST Results
+### Fashion MNIST Results
 ![Vanilla GAN](fashion_vanlia.jpg)
 ![DCGAN](fashion_dcgan.jpg)
 ![CGAN](fashion_cgan.jpg)
 
-### - MNIST Results
+### MNIST Results
 ![Vanilla GAN](mnist_vanlia.jpg)
 ![DCGAN](mnist_dcgan.jpg)
 ![CGAN](mnist_cgan.jpg)
