@@ -1,15 +1,14 @@
 import torch.nn as nn
 
-# Networks G & D
 class dcgan_G(nn.Module):
     def __init__(self, z_dim, img_size):
         super().__init__()
         self.img_size = img_size
         self.G = nn.Sequential(
-            # 이미지를 점점 키우는 역할(z_dim 노이즈를 이미지 크기로 복원)
+            # 이미지를 점점 키우는 역할
             nn.ConvTranspose2d(in_channels=z_dim, out_channels=64, kernel_size=7,
                                stride=1, padding=0, bias=False), # [64, 7, 7]
-            nn.BatchNorm2d(64), # 평균 0, 분산 1로 정규화함으로써 학습 안정화
+            nn.BatchNorm2d(64), 
             nn.ReLU(),
 
             nn.ConvTranspose2d(in_channels=64, out_channels=32, kernel_size=4,
@@ -45,7 +44,7 @@ class dcgan_D(nn.Module):
             nn.Conv2d(in_channels=1, out_channels=32, kernel_size=4,
                       stride=2, padding=1, bias=False), # [32, 14, 14]
             nn.BatchNorm2d(num_features=32),
-            nn.LeakyReLU(negative_slope=0.2), # LeakyReLU로 죽은 노드를 방지함
+            nn.LeakyReLU(negative_slope=0.2),
 
             nn.Conv2d(in_channels=32, out_channels=64, kernel_size=4,
                       stride=2, padding=1, bias=False), # [64, 7, 7]
@@ -68,5 +67,5 @@ class dcgan_D(nn.Module):
     def forward(self, x):
         batch_size = x.shape[0] # [b, 1, 28, 28]
         out = self.D(x) # 진짜/가짜 확률 계산 후 출력 [batch, 1, 1, 1]
-        out = out.squeeze() # 불필요한 차원 제거
-        return out # 진짜/가짜 확률 반환
+        out = out.squeeze() 
+        return out 
