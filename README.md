@@ -17,12 +17,12 @@ I have implemented a comprehensive pipeline that allows for training and evaluat
 	- Integrated loss functions (G_Loss, D_Loss) for stable training.
 
 ## Results
-### Fashion MNIST Results
+### - Fashion MNIST Results
 ![Vanilla GAN](fashion_vanlia.jpg)
 ![DCGAN](fashion_dcgan.jpg)
 ![CGAN](fashion_cgan.jpg)
 
-### MNIST Results
+### - MNIST Results
 ![Vanilla GAN](mnist_vanlia.jpg)
 ![DCGAN](mnist_dcgan.jpg)
 ![CGAN](mnist_cgan.jpg)
