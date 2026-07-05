@@ -16,6 +16,9 @@ I have implemented a comprehensive pipeline that allows for training and evaluat
 	- Modular training loop capable of switching between models.
 	- Integrated loss functions (G_Loss, D_Loss) for stable training.
 
+## Results
+![Generated Images]("C:\Users\qazxc\Downloads\202221681_장예령_HW6 (1)\202221681_장예령_HW6\fashion vanlia.jpg")
+
 ## Note
 The core architecture of this project is based on course materials provided by the university.
 I have independently implemented the data preprocessing pipeline, conducted hyperparameter tuning, and developed the training log monitoring system.
